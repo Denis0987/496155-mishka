@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Каталог товаров</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__top">
+        <div class="main-header__container">
+          <a class="logo" href="index.html">
+            <img src="img/mishka-logo-mobile.svg%20copy.jpg" alt="Мишка">
+          </a>
+          <button class="main-header__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#"><span class="main-nav ">Каталог товаров</span></a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html"><span class="main-nav">Вязание на заказ</span></a>
+            </li>
+          </ul>
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <a class="user-nav__link" href="#">
+                <span class="user-nav">
+
+                  Поиск по сайту
+                </span>
+              </a>
+            </li>
+            <li class="user-nav__item">
+              <a class="user-nav__link" href="#">
+                <span class="user-nav">
+                  Корзина: <span>пока пуста</span>
+              </span></a>
+            </li>
+          </ul>
+          <div class="main-header__delivery-info">Бесплатная доставка по России</div>
+        </div>
+      </div>
+      <h1 class="main-header__title">Каталог товаров</h1>
+    </header>
+    <section class="catalog">
+      <div class="catalog__container">
+        <section class="catalog-item">
+          <a class="catalog-item__img" href="#">
+              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" width="260" height="195">
+          </a>
+          <div class="catalog-item__content">
+            <div class="catalog-item__info">
+              <a class="catalog-item__title" href="#">Зайчик-попрыгайчик</a>
+              <p class="catalog-item__description">Рост 30 см, вес 200 г</p>
+            </div>
+            <div class="catalog-item__order">
+              <span class="catalog-item__price">1 200 руб.</span>
+              <a class="catalog-item__cart" href="#">
+
+                В козину
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="catalog-item">
+          <a class="catalog-item__img" href="#">
+              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" width="260" height="195">
+          </a>
+          <div class="catalog-item__content">
+            <div class="catalog-item__info">
+              <a class="catalog-item__title" href="#">Корзинка для белья</a>
+              <p class="catalog-item__description">Диаметр 15 см, высота 10 см</p>
+            </div>
+            <div class="catalog-item__order">
+              <span class="catalog-item__price">690 руб.</span>
+              <a class="catalog-item__cart" href="#">
+                В козину
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="catalog-item">
+          <a class="catalog-item__img" href="#">
+              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" width="260" height="195">
+          </a>
+          <div class="catalog-item__content">
+            <div class="catalog-item__info">
+              <a class="catalog-item__title" href="#">Большая корзинка для игрушек</a>
+              <p class="catalog-item__description">Диаметр 30 см, высота 30 см</p>
+            </div>
+            <div class="catalog-item__order">
+              <span class="catalog-item__price">1 500 руб.</span>
+              <a class="catalog-item__cart" href="#">
+                В козину
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="production">
+      <div class="production__container">
+        <h2 class="production__title">Процесс производства</h2>
+        <div class="production__video">
+          <button class="production__play-btn" type="button"></button>
+        </div>
+        <p class="production__description">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a href="#" class="production__order">Сделать заказ</a>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-footer__container">
+        <a class="main-footer__logo" href="#">
+
+        </a>
+        <div class="social-links">
+          <a class="social-link social-link--insta" href="#">
+           
+            Мы в Инстаграмме
+          </a>
+          <a class="social-link" href="#">
+             Мы в Фейсбуке
+          </a>
+          <a class="social-link" href="#">
+           
+            Мы в Твиттере
+          </a>
+        </div>
+        <div class="main-footer__copyright">
+          <a class="main-footer__copyright-link" href="#">
+            <span class="main-footer__copyright-text">Разработано:</span>
+            HTML Academy
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal modal--open">
+      <div class="modal__title">Добавить в корзину</div>
+      <p class="modal__description">Выберите размер:</p>
+      <form class="to-cart" action="#" method="get">
+        <div class="to-cart__sizes">
+          <p class="to-cart__size">
+            <input class="to-cart__radio" id="s-size" type="radio" name="size" value="s" checked>
+            <label class="to-cart__label" for="s-size">S</label>
+          </p>
+          <p class="to-cart__size">
+            <input class="to-cart__radio" id="m-size" type="radio" name="size" value="m">
+            <label class="to-cart__label" for="m-size">M</label>
+          </p>
+          <p class="to-cart__size">
+            <input class="to-cart__radio" id="l-size" type="radio" name="size" value="l">
+            <label class="to-cart__label" for="l-size">L</label>
+          </p>
+        </div>
+        <button class="to-cart__submit btn" type="submit">Добавить</button>
+      </form>
+    </div>
+  </body>
+</html>
