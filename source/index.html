@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="main-header__top">
+      <div class="main-header__top"> <!-- [1] Нет особого смысла в этом контейнере, т.к. main-header__bottom у нас нет.-->
         <div class="main-header__container">
           <a class="logo">
             <img src="img/logo-mobile.svg" alt="Мишка">
@@ -23,7 +23,13 @@
           <ul class="user-nav">
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <span class="user-nav">
+                <span class="user-nav"> <!-- [2] Вот здесь у нас класс точно такой же как у родительского блока. -->
+                  <!-- 
+                    [2]
+                    Нужно назвать его по-другому, например user-nav__search. 
+                    Но можно сделать еще лучше. Убрать span, который оборачивает svg и текст. А class добавить к user-nav__link.
+                    Причем пунктом меню с иконкой у нас 2, поэтому class будет общий, например user-nav__link--icon, и это модификатор класса.
+                  -->
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
                     <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
                   </svg>
@@ -33,7 +39,7 @@
             </li>
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <span class="user-nav">
+                <span class="user-nav"> <!-- [2] Вот здесь у нас класс точно такой же как у родительского блока. -->
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
                     <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
                         </svg>
@@ -42,15 +48,18 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> <!-- [1] -->
     </header>
+    
     <section class="promo">
+      <!-- Как будешь вставлять картинку для promo ? -->
       <h1 class="promo__title">Милые штуки<br> ручной<br> работы для дома</h1>
       <div class="promo__categories">
-        <a class="promo__link" href="#"><span class="promo__center">Предметы<br> интерьера</span></a>
+        <a class="promo__link" href="#"><span class="promo__center">Предметы<br> интерьера</span></a> <!-- Зачем нужен класс promo__center? -->
         <a class="promo__link" href="#"><span class="promo__сenter">Детские<br> игрушки</span></a>
       </div>
     </section>
+    
     <section class="best-seller">
       <div class="best-seller__container">
         <div class="best-seller__header">
@@ -63,7 +72,7 @@
           </p>
           <table class="best-seller__table">
             <tr class="best-seller__table-row">
-              <td class="best-seller__table">Цвет</td>
+              <td class="best-seller__table">Цвет</td> <!-- [3] класс best-seller__table-col для всех td в этой таблице -->
               <td class="best-seller__table">«Тиффани»/серый</td>
             </tr>
             <tr class="best-seller__table">
@@ -75,21 +84,35 @@
               <td class="best-seller__table">15 см</td>
             </tr>
           </table>
+          <!--
+            [3]
+            Многие источники советуют писать классы для элемнтов, чтобы потом стилизовать их, но мне кажется, иногда это излишне.
+            Например в этой таблице и так понятно, что tr - это строка row, а td - это ячейка таблицы.
+            Предлягаю оставить только класс best-seller__table, и сделать разметку более компактной.
+          -->
           <div class="best-seller__image">
               <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-tablet@2x.jpg 2x" alt="Вязаные корзинки" width="260" height="315">
           </div>
           <div class="best-seller__buy">
             <div class="best-seller__price">Цена: 990руб.</div>
-            <a class="best-seller" href="#">Заказать</a>
+            <a class="best-seller" href="#">Заказать</a> <!-- [4] класс btn btn--primary -->
+            <!-- 
+              [4]
+              Если взглянуть на макет, то некоторые элементы абсолютно одинаковые.
+              Например эта кнопка встречается в разных блоках.
+              Давай назовем ее btn--primary. Она будет наследовать какое-то общее поведение от btn,
+              а модификатор --primary будет задавать стиль с черным border.
+            -->
           </div>
         </div>
       </div>
     </section>
+    
     <section class="features">
       <div class="features__container">
         <h2 class="features__title">Коротко о нас:</h2>
         <ul class="features__list">
-          <li class="features__item">Экологически чистые материалы</li>
+          <li class="features__item">Экологически чистые материалы</li> <!-- для большей семантичности лучше назвать features__list-item -->
           <li class="features__item">Скандинавский стиль по российской цене</li>
           <li class="features__item">Увеличивает лайки на фотографиях</li>
           <li class="features__item">Связано вручную с любовью и умилением</li>
@@ -98,29 +121,40 @@
         </ul>
       </div>
     </section>
+    
     <section class="reviews">
       <div class="reviews__container">
         <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__items">
-          <p class="reviews__text">
-              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-          </p>
+        
+        <!-- Отзывов будет много, объединим их общим контейнером -->
+        <div class="reviews__list">
+          <!-- Это первый отзыв -->
+          <div class="reviews__list-item">
+            <!-- Это текст отзыва -->
+            <p class="reviews__text">
+                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            </p>
+            <!-- Это автор отзыва -->
+            <div class="reviews__author">Анастасия Красильникова <span class="reviews__author-contact">@misssssiskras</span></div>
+          </div>
+          <!-- Здесь будет второй отзыв и т.д. -->
         </div>
-        <div class="reviews__author">Анастасия Красильникова <span class="reviews__author-contact">@misssssiskras</span></div>
-        <div class="reviews__btns">
-          <button class="reviews__btn"></button>
-          <button class="reviews__btn" type="button"></button>
+        
+        <div class="reviews__btns"> <!-- Лучше назвать это .reviews__nav -->
+          <button class="reviews__btn"></button> <!-- А кнопкам добавить модификаторы reviews__btn--prev -->
+          <button class="reviews__btn"></button> <!-- reviews__btn--next -->
         </div>
-        <a class="reviews__write btn" href="#">Написать</a>
+        <a class="reviews__write btn" href="#">Написать</a> <!-- [4] класс btn btn--primary -->
       </div>
     </section>
+    
     <section class="contacts">
       <div class="contacts__container">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__items">
           <div class="contacts__item">
-            <span class="contacts__field">email:</span>
-            <a class="contacts__text" href="#">info@mimimishkashop.ru</a>
+            <span class="contacts__field">email:</span> <!-- Давай назовем  contacts__item-field -->
+            <a class="contacts__text" href="#">info@mimimishkashop.ru</a> <!-- contacts__item-text -->
           </div>
           <div class="contacts__item">
             <span class="contacts__field">адрес:</span>
@@ -131,8 +165,9 @@
       <div class="map">
         <div id="yandex-map" class="map__inner"></div>
       </div>
-      <a class="contacts__write" href="#">Напишите нам</a>
+      <a class="contacts__write" href="#">Напишите нам</a> <!-- [4] класс btn btn--primary -->
     </section>
+    
     <footer class="main-footer">
       <div class="main-footer__container">
         <div class="social-links">
@@ -197,7 +232,13 @@
             <label class="to-cart__label" for="l-size">L</label>
           </p>
         </div>
-        <button class="to-cart__submit" type="submit">Добавить</button>
+        <button class="to-cart__submit" type="submit">Добавить</button> <!-- [4-1] класс btn btn--secondary -->
+        <!-- 
+          [4-1]
+          Это та же кнопка, но зеленая. Да, она такая только в модальном окне, и можно сделать микс, который задает ей такой стиль.
+          Но предположим, что мы захотим заменить все кнопки с черной рамкой на зеленую заливку.
+          Мы просто поменяем модификатор на --secondary
+        -->
       </form>
     </div>
     </body>
