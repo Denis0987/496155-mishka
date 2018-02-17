@@ -76,6 +76,8 @@
 
     font-size: 17px;
 
+    // Избавиться от этих модификаторов в пользу универсальности
+    // Используй first-child, last-child для элементов меню
     &--catalog {
       border-right: 1px solid #ececec;
     }
