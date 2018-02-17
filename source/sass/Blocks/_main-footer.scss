@@ -31,8 +31,9 @@
 
   @media ($tablet) {
     display: block;
-    //width: 160px;
-    width: 32%;
+    width: 102px;
+    height: 34px;
+
   }
 }
 
@@ -50,8 +51,8 @@
   text-align: center;
 
   @media ($tablet) {
-    //width: 197px;
-    width: 32%;
+    width: 183px;
+
     padding-top: 6px;
 
     text-align: right;

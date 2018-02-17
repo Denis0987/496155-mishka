@@ -576,6 +576,16 @@
   }
 }
 
+}.order-form__line--box
+
+@media (min-width: 768px)
+
+.order-form__line--box {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .order-form__submit {
   @media ($tablet) {
     width: 230px;
