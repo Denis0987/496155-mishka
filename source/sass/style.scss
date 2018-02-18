@@ -1,0 +1,36 @@
+@import "normalize.scss";
+
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "global/typography.scss";
+@import "global/layout.scss";
+
+//index.html
+@import "blocks/main-header.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/user-nav.scss";
+@import "blocks/extra-nav.scss";
+@import "blocks/promo.scss";
+@import "blocks/best-seller.scss";
+@import "blocks/btn.scss";
+@import "blocks/features.scss";
+@import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/map.scss";
+@import "blocks/main-footer.scss";
+@import "blocks/social-links.scss";
+@import "blocks/social-link.scss";
+@import "blocks/modal.scss";
+@import "blocks/to-cart.scss";
+
+//catalog.html
+@import "blocks/catalog.scss";
+@import "blocks/catalog-item.scss";
+@import "blocks/modal.scss";
+@import "blocks/production.scss";
+
+//form.html
+@import "blocks/order.scss";
+@import "blocks/order-form.scss";
