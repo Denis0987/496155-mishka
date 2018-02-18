@@ -1,0 +1,28 @@
+.logo {
+  display: block;
+  order: 1;
+  width: 86px;
+  height: 35px;
+  margin-bottom: 22px;
+
+  @media ($tablet) {
+    width: 113px;
+    height: 46px;
+    margin-top: 22px;
+  }
+
+  @media ($desktop) {
+    order: 2;
+    width: 149px;
+    height: 73px;
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
