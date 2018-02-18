@@ -40,8 +40,11 @@
 
     &--name {
       margin-bottom: 30px;
-
       @include container;
+    }
+
+    &--box {
+       @include container;
     }
 
     &:last-of-type {
@@ -210,8 +213,6 @@
     }
 
     &--box {
-      margin-top: 50px;
-
       @include container;
     }
   }
@@ -225,10 +226,6 @@
     }
 
     &--small {
-      padding-left: 112px;
-    }
-
-    &--box {
       padding-left: 112px;
     }
   }
@@ -576,25 +573,36 @@
   }
 }
 
-}.order-form__line--box
-
-@media (min-width: 768px)
-
-.order-form__line--box {
+.order-form__section--box {
     margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.order-form__submit {
+.order-form__section--box .order-form__line {
   @media ($tablet) {
-    width: 230px;
-    margin-top: 53px;
+    display: flex;
+    align-items: baseline;
+    width: 500px;
+    margin-bottom: 20px;
   }
 
   @media ($desktop) {
-    margin-top: 49px;
-    margin-left: 113px;;
+    width: 700px;
+  }
+}
+
+.order-form__section--box .order-form__section--submit {
+  @media (min-width: 768px) and (max-width: 1150px) {
+    margin-left: -167px;
+    width: auto;
+  }
+}
+
+.order-form__submit {
+  @media ($tablet) {
+    width: 230px;
+    margin-top: 32px;
   }
 }
 
@@ -602,6 +610,7 @@
   display: block;
   margin-top: 10px;
   margin-bottom: 31px;
+  margin-left: auto;
 
   font-size: 14px;
   line-height: 16px;
@@ -610,10 +619,5 @@
     order: 1;
 
     font-size: 17px;
-  }
-
-  @media ($desktop) {
-    margin-right: 235px;
-    margin-left: auto;
   }
 }

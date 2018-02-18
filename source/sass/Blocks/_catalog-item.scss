@@ -18,13 +18,16 @@
     flex-direction: column;
     width: 315px;
     margin-right: 52px;
-    margin-bottom: 0;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 
     border: 0;
 
     &:nth-child(3n) {
       margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
     }
   }
 }
@@ -115,11 +118,11 @@
   }
 }
 
-.catalog-item:hover .catalog-item__content {
+.catalog-item:hover {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.catalog-item:active .catalog-item__content {
+.catalog-item:active {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 

@@ -152,11 +152,17 @@
               </svg>
             </p>
           </div>
-          <div class="order-form__line  order-form__line--small order-form__line--box">
-            <label class="order-form__caption order-form__caption--box">Доп</label>
-            <textarea class="order-form__text order-form__text--box" name="name" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            <small class="order-form__note"><sup>*</sup>Поля обязательны для заполнения</small>
-            <button class="order-form__submit btn" type="submit">Отправить заказ</button>
+          <div class="order-form__section order-form__section--box">
+              <label class="order-form__title order-form__caption order-form__caption--box">Доп</label>
+              <div class="order-form__lines">
+                <div class="order-form__line order-form__line--box">
+                  <textarea class="order-form__text order-form__text--box" name="name" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </div>
+                <div class="order-form__line order-form__line--box order-form__section--submit">
+                  <small class="order-form__note"><sup>*</sup>Поля обязательны для заполнения</small>
+                  <button class="order-form__submit btn" type="submit">Отправить заказ</button>
+                </div>
+              </div>
           </div>
         </form>
       </div>
