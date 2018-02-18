@@ -1,4 +1,3 @@
-
 "use strict";
 
 var gulp = require("gulp");
@@ -31,3 +30,4 @@ gulp.task("serve", ["style"], function() {
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html").on("change", server.reload);
 });
+
