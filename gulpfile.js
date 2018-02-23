@@ -54,6 +54,7 @@ gulp.task("images", function() {
   .pipe(gulp.dest("build/img"));
 });
 
+
 gulp.task("webp", function () {
   return gulp.src("build/img/**/*.{png,jpg}")
   .pipe(webp({quality: 90}))
@@ -117,3 +118,4 @@ gulp.task("build", function (done) {
     done
     );
 });
+
